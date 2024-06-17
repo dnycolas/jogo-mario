@@ -33,10 +33,10 @@ const dia = () => {
     // Cores RGB para o dia e a noite
     const corDia = [32, 240, 255, 255, 254, 197];
     const corNoite = [1, 11, 95, 19, 55, 255];
-    
+
     // Cópia das cores do dia, para manipulação
     let corAtual = [...corDia];
-    
+
     // Flag para determinar se está revertendo a transição
     let reverter = false;
 
@@ -67,7 +67,7 @@ const dia = () => {
             setTimeout(horario, 100);
         } else {
             reverter = !reverter;
-            setTimeout(horario, 100);
+            setTimeout(horario, 500);
         }
     }
 
@@ -75,6 +75,35 @@ const dia = () => {
     horario();
 }
 
+
+
+
+const pontuacao = () => {
+    const elementos = diaria
+
+    let num = 0
+    const para = document.createElement("p");
+    const node = document.createTextNode(`${num}`);
+    para.appendChild(node);
+    elementos.appendChild(para)
+
+    setTimeout(() => {
+
+        setTimeout(() => {
+            elementos.classList.remove(para);
+        }, 1000);
+
+    }, 1000)
+
+
+    pontuacao()
+
+
+}
+
 // Adiciona eventos de carregamento do DOM e tecla pressionada
 document.addEventListener("DOMContentLoaded", dia);
+document.addEventListener('DOMContentLoaded', pontuacao);
 document.addEventListener('keydown', jump);
+
+
