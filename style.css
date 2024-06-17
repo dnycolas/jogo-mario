@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.gameBoard {
+    width: 1366px;
+    height: 633px;
+
+
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    border: solid 2px black;
+
+   
+}
+
+.um {
+    z-index: 1;
+    background: black;
+    color: black;
+    width: 274px;
+    height: 510px;
+}
+
+.game {
+
+    width: 60%;
+    height: 80%;
+    
+
+ 
+
+    border-bottom: solid 5px rgb(35, 160, 35);
+
+    /* background: linear-gradient(0deg ,rgb(32, 240, 255),rgb(255, 254, 197));
+    animation: background-animation 10s cubic-bezier(1, 0.1, 0.1, 0.5) reverse infinite; */
+}
+
+.element {
+    background-size: 205% 355%;
+    background-position-y: 0px;
+    background-position-x: -50px;
+}
+
+
+.clouds {
+    width: 100px;
+    position: absolute;
+
+    left: 22%;
+    top: 11%;
+
+
+    animation: clouds-animation 6s infinite linear;
+}
+
+.cloudsUm {
+    width: 200px;
+    position: absolute;
+
+    left: 55%;
+    top: 15%;
+
+     animation: clouds-animation 10s infinite linear
+}
+
+.pipe  {
+    position: absolute;
+
+    width: 80px;
+
+    bottom: 65px;
+    left: 10%;
+
+    animation: pipe-animation 1.5s infinite linear;
+
+
+    overflow: hidden;
+    
+}
+
+
+.mario {
+    width: 150px;
+
+    position: absolute;
+
+    bottom: 65px;
+}
+
+.jump {
+    animation: jump-animation 750ms  ease-out;
+}
+
+@keyframes pipe-animation {
+    from {
+        left: 80%;
+    }
+
+    to {
+        left: 14%;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 5%;
+    }
+}
+
+@keyframes clouds-animation-main {
+    from {
+        left: 80%;
+    }
+    to {
+        left: 5%;
+    }
+}
+
+@keyframes jump-animation {
+    0% ,100% {
+        bottom: 65px;
+    }
+
+     40% ,50%, 60%,80% {
+        bottom: 300px;
+    }   
+}
+
+@keyframes background-animation {
+    0%,100% {
+        background: linear-gradient(0deg ,rgb(32, 240, 255),rgb(255, 254, 197));
+    }
+
+    
+
+    50% {
+        background:  linear-gradient(rgb(1, 11, 95),rgb(19, 55, 255));
+  
+    }   
+}
+
